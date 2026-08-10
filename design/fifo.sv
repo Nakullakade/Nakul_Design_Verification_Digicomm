@@ -1,6 +1,7 @@
 // File: design/fifo.sv
 // Description: Parameterized Synchronous FIFO Memory Module
 
+// edited - this comment is added in the file
 module fifo #(
     parameter int DATA_WIDTH          = 32,
     parameter int DEPTH               = 16,
