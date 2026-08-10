@@ -64,5 +64,24 @@ module task_functions_exp;
     m1.my_func_static();
     $display("addition value= %0d",m1.add(m1.add(11,22),m1.add(33,44)));
   end
+
+
+  // recursuve function factorial 
+  function automatic int factorial(int a);
+    if (a <= 0)
+      return 1;
+    else
+      return a*factorial(a-1);
+  endfunction
   
+  task my_factorial_task;
+    int a= 10;
+    $display("factorial= %0d",factorial(a));
+  endtask
+  
+  initial begin
+    // my_factorial_task();
+    int a= factorial(5);
+    $display(a);
+  end 
 endmodule
